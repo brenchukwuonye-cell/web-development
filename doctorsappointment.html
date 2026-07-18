@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor appointment form </title>
+</head>
+<body>
+
+    <h1>My doctors appointment</h1>
+    <P>Fill in the form below to book your appointment</P>
+    <form>
+        <fieldset>
+            <legend>personal details</legend>
+            <label>your name </label><br>
+            <input type="text" id="name" placeholder="enter your full name "><br><br>
+            <label>patient id</label><br>
+            <input type="password" id="pid" placeholder="your secret id"><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>your visit</legend>
+            <label>choose your doctor</label>
+            <select id="doctor">
+                <option value="">select a doctor</option>
+                <option value="">dr.ray-eyes doctor</option>
+                <option value="">dr.henry-general</option>
+                <option value="">dr.harry-brain doctor</option>
+            </select><br><br>
+
+            <label>why are you visiting</label><br>
+            <input type="radio" name="reason" value="fever">Fever<br>
+            <input type="radio" name="reason" value="check up">Check Up<br>
+            <input type="radio" name="reason" value="general">General<br>
+            <input type="radio" name="reason" value="cold">Cold<br>
+        </fieldset>
+        
+             <legend>preferred visit day</legend>
+             <input type="checkbox" value="mon">  monday<br>
+             <input type="checkbox" value="tue">  tuesday<br>
+             <input type="checkbox" value="wed">  wednesday<br>
+             <input type="checkbox" value="thurs">  thursday<br>
+             <input type="checkbox" value="fri">  friday<br>
+             <input type="checkbox" value="sat">  saturday<br>
+              <input type="checkbox" value="sun">  sunday<br>
+         </fieldset>
+    </form>
+    
+</body>
+</html>
