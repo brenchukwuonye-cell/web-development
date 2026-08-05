@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Ice Cream Shop Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: aqua;
+      text-align: center;
+      color: bisque;
+    }
+    h1 {
+      color: blanchedalmond;
+      font-size: 36px;
+    }
+    h1 + p {
+      color:azure ;
+      font-weight: bold;
+      background-color:burlywood;
+      border-radius: 10px;
+    }
+    .shop-description::first-letter {
+      font-size: inherit;
+      font-weight:normal;
+    }
+    .menu-box {
+      width: 420px;
+      background-color:cyan;
+      border: 3px solid #ffff69;
+      border-radius: 15px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    ul {
+      padding: 0;
+    }
+    ul > li {
+      list-style: none;
+      background-color:darkkhaki;
+      color:#ff69b4;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #ddb6ff;
+    }
+    ul > li:nth-child(3) {
+      background-color: #cdffe1;
+      color: #12b80074;
+      border: 3px solid #ff009d;
+    }
+    ul > li:hover {
+      background-color: #ff69b4;
+      color:antiquewhite;
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+    button {
+      background-color:chartreuse;
+      color:cornflowerblue;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: cadetblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Ice Cream Shop Menu</h1>
+  <p>Welcome to Sundae Fundae!</p>
+  <p class="shop-description">
+    We serve smiles with a cherry on top.
+  </p>
+  <div class="menu-box">
+    <h2>Today's Ice Cream Flavours</h2>
+    <ul>
+      <li>Peanut butter fudge</li>
+      <li>cookie dough</li>
+      <li>Strawberry - Today's Special</li>
+      <li>Vanilla </li>
+      <li>Blueberry </li>
+    </ul>
+    <button>Order Now</button>
+  </div>
+</body>
+</html>
