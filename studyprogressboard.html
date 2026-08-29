@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Study Progress Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <style>
+    body { background-color:blanchedalmond; font-family: Arial, sans-serif; }
+    .jumbotron { background-color:beige; border-left: 6px solid cadetblue; }
+    .jumbotron h1 { color:burlywood; }
+    .section-title { color:darkkhaki; margin-top: 30px; margin-bottom: 15px; }
+    p { font-weight: bold; margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+
+  <!-- TOPIC 1: JUMBOTRON -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>My Study Progress Dashboard</h1>
+      <p class="lead">Track your subjects, completed lessons, and learning progress in one place.</p>
+
+      <!-- TOPIC 2: BUTTONS -->
+      <button class="btn btn-primary">Physical Education</button>
+      <button class="btn btn-success">Computer Science</button>
+      <button class="btn btn-warning">Religious Education</button>
+      <button class="btn btn-danger">Drama</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- TOPIC 3: BADGES -->
+    <h2 class="section-title">Lessons Completed <span class="badge badge-danger">24</span></h2>
+
+    <p>Physical Education <span class="badge badge-primary">8 lessons</span></p>
+    <p>Computer Science <span class="badge badge-success">6 lessons</span></p>
+    <p>Religious Education <span class="badge badge-warning">5 lessons</span></p>
+    <p>Drama<span class="badge badge-info">5 lessons</span></p>
+
+    <!-- TOPIC 4: PROGRESS BARS -->
+    <h2 class="section-title">Subject Progress</h2>
+
+    <p>Physical Education</p>
+    <div class="progress mb-3">
+      <div class="progress-bar bg-primary" style="width: 80%">80%</div>
+    </div>
+
+    <p>Computer Science</p>
+    <div class="progress mb-3">
+      <div class="progress-bar bg-success" style="width: 65%">65%</div>
+    </div>
+
+    <p>Religious Education</p>
+    <div class="progress mb-3">
+      <div class="progress-bar bg-warning" style="width: 55%">55%</div>
+    </div>
+
+    <p>Drama</p>
+    <div class="progress mb-3">
+      <div class="progress-bar bg-danger" style="width: 70%">70%</div>
+    </div>
+
+  </div>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
