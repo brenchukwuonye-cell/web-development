@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game profile</title>
+ <style>
+  body{
+    font-family: Arial,sans-serif;
+    background-color: darkcyan;
+    text-align: center;
+    padding: 30px;
+  }
+  h1{color: black;}
+  button{
+   background:lightskyblue;
+   color:darkblue;
+   padding: 10px 25px;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+  }
+  div{
+    border: 1px solid hotpink;
+    width: 280px;
+    margin: 6px auto;
+    padding: 8px 12px;
+    text-align: left;
+    border-radius: 6px;
+  }
+ </style>
+</head>
+<body>
+ <h1>My game profile</h1>
+ <button onclick="showprofile()">Show Profile</button>
+
+ <div>name:<span id="name"></span></div>
+ <div>score:<span id="score"></span></div>
+ <div>top score:<span id="record"></span></div>
+ <div>rank:<span id="rank"></span></div>
+ <div>greeting:<span id="greeting"></span></div>
+ <div>stars:<span id="stars"></span></div>
+ <div>bonus level:<span id="bonus"></span></div>
+ <div>team name:<span id="team"></span></div>
+
+ <script>
+ function showprofile(){
+    let name    ="Nathan";
+    let myScore  ="100";
+    let highScore  ="150";
+    let bonus  = null;
+    let team;
+
+    let isTopScore = myscore == highscore;
+
+    let rank;
+    if (myScore >= 150){
+        rank = "Gold";
+    } else if (myScore>= 100){
+        rank = "silver";
+    } else{
+        rank:"bronze";
+    }
+
+    let hour = new date().getHours();
+    let greeting;
+    if(hour < 12) {
+        greeting = "Good morning!";
+    } else if (hour < 17) {
+        greeting = "Good afternoon!";
+    } else {
+        greeting = "Good evening!";
+    }
+
+    let stars ="";
+    let count = 0;
+    while (count < 5) {
+        stars = stars + "* ";
+        count = count + 1;
+    }
+
+    document.getElementById("name").innerHTML   = name;
+    document.getElementById("score").innerHTML  = myScore + " out of "+ highScore;
+    document.getElementById("record").innerHTML = isTopScore;
+    document.getElementById("rank").innerHTML   = rank;
+    document.getElementById("greeting").innerHTML = greeting;
+    document.getElementById("stars").innerHTML   = stars;
+    document.getElementById("bonus").innerHTML   = bonus;
+    document.getElementById("team").innerHTML    = team;
+    
+ }  
+
+ </script>
+</body>
+</html>
