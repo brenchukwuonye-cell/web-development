@@ -3,7 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Planet card</title>
+ <style>
+ body{
+ font-family: Arial, sans-serif;
+ background:rgb(13, 117, 117); 
+ padding: 30px;
+ text-align: center;
+ }
+
+ h1{color:darkkhaki;}
+ p {color:darkkhaki;}
+ .cards{
+ display:flex;
+ justify-content: center;
+ gap: 20px;
+ margin-top: 25px;
+ }
+ .card{
+ background: dodgerblue;
+ border: 3px solid bisque;
+ border-radius: 12px;
+ padding: 20px;
+ width: 200px;
+ }
+ .planet-name {
+ font-size:22px;
+ font-weight: bold;
+ color: goldenrod;
+ }
+ </style>
 </head>
 <body>
  <h1>Planet Cards</h1>
@@ -28,9 +57,9 @@
   
  function showplanets() {
     let p1 = new planets("Mercury", "The smallest and closest to the Sun of the eight planets in the Solar System,");
-    let p2 = new planets("venus", " The second planet from the Sun, orbiting it every 224.7 Earth days. ");
-    let p3 = new planets("jupiter", "The fifth planet from the Sun and the largest planet in the Solar System.");
- }
+    let p2 = new planets("Venus", " The second planet from the Sun, orbiting it every 224.7 Earth days. ");
+    let p3 = new planets("Jupiter", "The fifth planet from the Sun and the largest planet in the Solar System.");
+ 
 
  document.getElementById("card1").innerHTML = 
  "<div class='card'><div class='planet-name'>" + p1.name + "</div>" +
@@ -43,6 +72,7 @@
  document.getElementById("card3").innerHTML = 
  "<div class='card'><div class='planet-name'>" + p3.name + "</div>" +
  "<div class='planet-fact'>" + p3.describe() + "</div> </div>";
+ }
  </script>
 </body>
 </html>
