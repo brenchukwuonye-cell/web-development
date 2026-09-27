@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Digital Zoo Manager</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color:burlywood;
+      text-align: center;
+      color:cadetblue;
+    }
+
+    h1 {
+      color:darkcyan;
+    }
+
+    #zoo {
+      width: 420px;
+      border: 3px solid bisque;
+      border-radius: 12px;
+      background-color:blanchedalmond;
+      margin: 20px auto;
+      padding: 15px;
+    }
+
+    .zone {
+      border: 2px solid peachpuff;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 12px;
+      background-color:navajowhite;
+      text-align: left;
+    }
+
+    .animal {
+      font-weight: bold;
+      color:tan;
+    }
+
+    button {
+      background-color:darkkhaki;
+      color:black;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 22px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #output {
+      width: 420px;
+      border: 2px dashed powderblue;
+      border-radius: 10px;
+      background-color: #ffffff;
+      margin: 20px auto;
+      padding: 12px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My Digital Zoo Manager</h1>
+
+  <p>
+    Use JavaScript and the DOM to explore animals, zones, parent nodes,
+    child nodes, and sibling nodes.
+  </p>
+
+  <div id="zoo">
+
+    <div class="zone" id="TurtleZone">
+      <h2>Turtle Zone</h2>
+      <p>Animal: <span class="animal">Turtle</span></p>
+    </div>
+
+    <div class="zone" id="TigerZone">
+      <h2>Tiger Zone</h2>
+      <p>Animal: <span class="animal">Tiger</span></p>
+    </div>
+
+    <div class="zone" id="KoalaZone">
+      <h2>Koala Zone</h2>
+      <p>Animal: <span class="animal">Koala</span></p>
+    </div>
+
+  </div>
+
+  <button onclick="manageZoo()">Manage Zoo</button>
+
+  <div id="output">
+    Zoo information will appear here.
+  </div>
+
+  <script>
+    function manageZoo() {
+
+      let zoo = document.getElementById("zoo");
+      let TurtleZone = document.getElementById("TurtleZone");
+      let TigerZone = document.getElementById("TigerZone");
+      let KoalaZone = document.getElementById("KoalaZone");
+      let output = document.getElementById("output");
+
+      let parentNodeName = TurtleZone.parentNode.id;
+
+      let firstChildZone = zoo.children[0].id;
+      let secondChildZone = zoo.children[1].id;
+      let nextSiblingZone = TurtleZone.nextElementSibling.id;
+      let previousSiblingZone = KoalaZone.previousElementSibling.id;
+
+      let elementNodeType = TurtleZone.nodeType;
+      let textNodeType = TurtleZone.firstChild.nodeType;
+
+      TurtleZone.style.backgroundColor = "#fff3cd";
+      TigerZone.style.backgroundColor = "#d1ecf1";
+      KoalaZone.style.backgroundColor = "#f8d7da";
+
+      TurtleZone.querySelector("h2").innerHTML = "Updated Turtle Zone";
+      TigerZone.querySelector("h2").innerHTML = "Updated Tiger Zone";
+      KoalaZone.querySelector("h2").innerHTML = "Updated Koala Zone";
+
+      output.innerHTML =
+        "<strong>DOM Tree Information:</strong><br>" +
+        "Parent of Turtle Zone: " + parentNodeName + "<br>" +
+        "First child of Zoo: " + firstChildZone + "<br>" +
+        "Second child of Zoo: " + secondChildZone + "<br><br>" +
+
+        "<strong>Sibling Node Information:</strong><br>" +
+        "Next sibling of Turtle Zone: " + nextSiblingZone + "<br>" +
+        "Previous sibling of Koala Zone: " + previousSiblingZone + "<br><br>" +
+
+        "<strong>Types of Nodes:</strong><br>" +
+        "Turtle Zone element node type: " + elementNodeType + "<br>" +
+        "Turtle Zone first child text node type: " + textNodeType + "<br><br>" +
+
+        "<strong>DOM Update:</strong><br>" +
+        "The animal zone headings and background colours were updated using JavaScript.";
+    }
+  </script>
+
+</body>
+</html>
