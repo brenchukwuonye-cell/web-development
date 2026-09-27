@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h1>Planet Cards</h1>
+ <P>Use javascript class to build planet cards</P>
+ <button onclick="showplanets()">Show planets!</button>
+ <div class="cards">
+ <div id="card1"></div>
+ <div id="card2"></div>
+ <div id="card3"></div>
+ </div>
+
+ <script>
+ class planets{
+ constructor(name,fact) {
+    this.name = name;
+    this.fact = fact;
+ }
+ describe() {
+    return this.name + ": " + this.fact;
+  }
+ }
+  
+ function showplanets() {
+    let p1 = new planets("Mercury", "The smallest and closest to the Sun of the eight planets in the Solar System,");
+    let p2 = new planets("venus", " The second planet from the Sun, orbiting it every 224.7 Earth days. ");
+    let p3 = new planets("jupiter", "The fifth planet from the Sun and the largest planet in the Solar System.");
+ }
+
+ document.getElementById("card1").innerHTML = 
+ "<div class='card'><div class='planet-name'>" + p1.name + "</div>" +
+ "<div class='planet-fact'>" + p1.describe() + "</div> </div>";
+
+ document.getElementById("card2").innerHTML = 
+ "<div class='card'><div class='planet-name'>" + p2.name + "</div>" +
+ "<div class='planet-fact'>" + p2.describe() + "</div> </div>";
+
+ document.getElementById("card3").innerHTML = 
+ "<div class='card'><div class='planet-name'>" + p3.name + "</div>" +
+ "<div class='planet-fact'>" + p3.describe() + "</div> </div>";
+ </script>
+</body>
+</html>
