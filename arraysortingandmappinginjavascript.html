@@ -54,6 +54,19 @@
  document.getElementById("nameResult").innerHTML = "Songs: " + songs;
  document.getElementById("countResult").innerHTML = "Plays: " + plays;
  document.getElementById("labelResult").innerHTML = "Press the button above!";
+
+ function sortAZ()  {songs.sort();
+ document.getElementById("nameResult").innerHTML = "Songs: " + songs;}
+ function sortZA()  {songs.sort(); songs.reverse();
+ document.getElementById("nameResult").innerHTML = "Z to A: " + songs; }
+ function sortAZ()  {songs.sort();
+ document.getElementById("nameResult").innerHTML = "Songs: " + songs;}
+ function sortAZ()  {songs.sort();
+ document.getElementById("nameResult").innerHTML = "Songs: " + songs;}
+ function sortLeast() { plays.sort(function(a,b){return a-b;}); document.getElementById("countResult").innerHTML = "Least played first: " + plays; }
+  function sortMost()  { plays.sort(function(a,b){return b-a;}); document.getElementById("countResult").innerHTML = "Most played first: " + plays; }
+  function addLabel()  { var l = plays.map(function(c){return c+" plays";}); document.getElementById("labelResult").innerHTML = "Labelled: " + l; }
+
 </script>
 </body>
 </html>
