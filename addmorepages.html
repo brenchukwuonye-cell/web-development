@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body, html{
+  height:100%;
+  margin:0;
+  font-size:16px;
+  font-family:"Lato", sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color:cornflowerblue;
+  background-color:darkcyan;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:dodgerblue;
+}
+
+.topnav a {
+  display: inline;
+  color:lavender;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color:darkseagreen;
+}
+
+.pimg1, .pimg2, .pimg3 {
+  position:relative;
+  opacity: 0.70;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+.pimg1 {
+  background-image:url('image1.jpg');
+  min-height:100%;
+}
+
+.pimg2 {
+  background-image:url('image2.jpg');
+  min-height:400px;
+}
+
+.pimg3 {
+  background-image:url('image3.jpg');
+  min-height:400px;
+}
+
+.section {
+  text-align:center;
+  padding:50px 80px;
+}
+
+.section-light{
+  background-color:honeydew;
+  color:#666;
+}
+
+.section-dark{
+  background-color:darkturquoise;
+  color:lightgreen;
+}
+
+.ptext {
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  color:ivory;
+  font-size:27px;
+  letter-spacing:8px;
+  text-transform:uppercase;
+}
+
+.ptext .border {
+  background-color:moccasin;
+  color:palegoldenrod;
+  padding:20px;
+}
+
+.ptext .border.trans {
+  background-color:transparent;
+}
+
+@media(max-width:568px){
+  .pimg1, .pimg2, .pimg3 {
+    background-attachment:scroll;
+  }
+} 
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="http://127.0.0.1:5500/first%20project%20folder/home.html">Home</a>
+      <a href="http://127.0.0.1:5500/navbar/aboutus2.html">About-Me</a>
+      <a href="http://127.0.0.1:5500/navbar/gallery.html">Gallery</a>
+      <a href="http://127.0.0.1:5500/navbar/contact.html">Contact-Us</a>
+    </div><br>
+
+    <span class="border trans" style="font-size:40px;">
+      <center>Welcome all to this website</center>
+    </span><br>
+    
+    <section class="section section-dark">
+      <h2>Section One</h2>
+      <p>
+        Web development is the work involved in developing a Web site for the Internet (World Wide Web) or an intranet (a private network).
+      </p>
+    </section>
+
+    <div class="pimg3">
+      <div class="ptext">
+        <span class="border trans">Image Two Text</span>
+      </div>
+    </div>
+
+    <section class="section section-dark">
+      <span>All @copy rights reserved by Swati Singh</span>
+    </section>
+  </body>
+</html>
+
+
+<section>
+  <img class="mySlides" src="images (4).jpg" style="height:500px; width:1340px;">
+  <img class="mySlides" src="images (5).jpg" style="height:500px; width:1340px;">
+  <img class="mySlides" src="images (6).jpg" style="height:500px; width:1340px;">
+</section>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
